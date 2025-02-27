@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once( 'flormar_view.php' );
 
 add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_script( 'jquery-mobile', plugin_dir_url( __FILE__ ) . '/jquery.mobile/jquery.mobile-1.4.5.js', array( 'jquery' ), '1.4.5' );
+	wp_enqueue_script( 'jquery-mobile', plugin_dir_url( __FILE__ ) . '/jquery.mobile-1.4.5.min.js', array( 'jquery' ), '1.4.5' );
 
 	wp_enqueue_script( 'flormar-js', plugin_dir_url( __FILE__ ) . '/public.js', array( 'jquery', 'jquery-mobile' ) );
 	

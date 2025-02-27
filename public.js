@@ -53,13 +53,13 @@
 	$(document).on('pageinit', function(event){
 		$(document).on( "swipeleft", function(e) {
 			if ( $(e.target).closest('.flormar-carousel-container').length ) {
-				$('.flormar-carousel-controls.prev').trigger('click');
+				$('.flormar-carousel-controls.next').trigger('click');
 			}
 			return true;
 		});
 		$(document).on( "swiperight", function(e) {
 			if ( $(e.target).closest('.flormar-carousel-container').length ) {
-				$('.flormar-carousel-controls.next').trigger('click');
+				$('.flormar-carousel-controls.prev').trigger('click');
 			}
 			return true;
 		});
