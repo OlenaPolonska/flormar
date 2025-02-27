@@ -1,0 +1,244 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+}
+
+.flormar-carousel-container {
+	background: #FDEDF2;
+	color: var(--blue);
+	padding: 0 218px;
+	position: relative;
+	overflow: auto;
+}
+
+@media (max-width: 120em) {
+	.flormar-carousel-container {
+		padding: 0 20px;
+	}
+}
+
+.flormar-carousel-container h1,
+.flormar-carousel-seat,
+.flormar-carousel-seat a {
+	color: var(--black);
+}
+
+.flormar-carousel-container h1 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 40px;
+	text-align: right;
+	margin: 22px 0;
+}
+
+@media (max-width: 40em) {
+	.flormar-carousel-container h1 {
+		font-size: 36px;
+		text-align: center;
+		margin: 30px 0;
+	}
+}
+
+.flormar-carousel-wrap {
+/* 	margin: 24px 0 20px; */
+	overflow: hidden;
+}
+
+.flormar-carousel {
+	display: flex;
+	left: -25%;
+	transform: translateX(25%);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+@media (max-width: 40em) {
+	.flormar-carousel {
+		left: -50%;
+		transform: translateX(50%);
+	}
+}
+
+/* @media (max-width: 30em) {
+	.flormar-carousel {		
+		left: -100%;
+		transform: translateX(100%);
+	}
+} */
+
+.flormar-carousel.is-reversing {
+	transform: translateX(-25%);
+}
+
+@media (max-width: 40em) {
+	.flormar-carousel.is-reversing {
+		transform: translateX(-50%);
+	}
+}
+
+/* @media (max-width: 30em) {
+	.flormar-carousel.is-reversing {
+		transform: translateX(-100%);
+	}
+} */
+
+.flormar-carousel.is-set {
+	transform: none;
+	transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.flormar-carousel-seat {
+	padding: 0 12px;
+	flex: 1 0 25%;
+/* 	order: 3; */
+}
+
+@media (max-width: 40em) {
+	.flormar-carousel-seat {
+		flex-basis: 50%;
+		padding: 0 6px;
+	}
+}
+
+/* @media (max-width: 30em) {
+	.flormar-carousel-seat {
+		flex-basis: 100%;
+	}
+} */
+
+.flormar-carousel-seat .image-container {
+	background-color: var(--white);
+	max-width: 336px;
+	height: 396px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flormar-carousel-seat .image-container img {
+	object-fit: contain;
+}
+
+@media (max-width: 40em) {
+	.flormar-carousel-seat .image-container {
+		max-width: 216px;
+		height: 270px;
+	}
+}
+
+.flormar-carousel-seat .divider {
+	width: 100%;
+	height: 0px;
+	border: 0.5px solid #6C6C6C;
+	margin-top: 20px;
+}
+
+@media (max-width: 40em) {
+	.flormar-carousel-seat .divider {
+		margin-top: 10px;
+	}
+}
+
+.flormar-carousel-seat .product-name {
+	display: block;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	text-transform: capitalize;
+	text-align: center;
+	margin-top: 20px;
+}
+
+@media (max-width: 40em) {
+	.flormar-carousel-seat .product-name {
+		font-size: 16px;
+		line-height: 18px;
+		margin-top: 10px;
+	}
+}
+
+.flormar-carousel-seat .product-price {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	margin: 30px 0 40px;
+}
+
+@media (max-width: 40em) {
+	.flormar-carousel-seat .product-price {
+		font-size: 18px;
+		line-height: 21px;
+		margin: 10px 0 30px;
+	}
+}
+
+.flormar-carousel-seat.is-ref {
+	order: 1;
+}
+
+.flormar-carousel h2 {
+	color: #aaa;
+	font-size: 7em;
+	font-weight: normal;
+	margin: 0;
+	padding: 0.6em 0;
+	text-align: center;
+}
+
+.flormar-carousel-controls {
+	position: absolute;
+	top: 270px;
+
+	width: 38px;
+	height: 38px;
+	background: var(--black);
+	border-radius: 50%;
+	color: var(--white);
+}
+
+.flormar-carousel-controls svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.flormar-carousel-controls svg rect,
+.flormar-carousel-controls svg path {
+	fill: var(--white);
+}
+
+.flormar-carousel-controls.prev {
+	left: 100px;
+}
+
+.flormar-carousel-controls.next {
+	right: 100px;
+}
+
+.flormar-carousel-controls:hover, 
+.flormar-carousel-controls:focus {
+	background: #bbb;
+}
+
+@media (max-width: 120em) {
+	.flormar-carousel-controls.prev {
+		left: 10px;
+	}
+
+	.flormar-carousel-controls.next {
+		right: 10px;
+	}
+}
+
+@media (max-width: 40em) {
+	.flormar-carousel-controls {
+		display: none;
+	}
+}
